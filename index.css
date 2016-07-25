@@ -8,11 +8,10 @@ body {
 	overflow:hidden;
 }
 .background {
-	height:100vh;
+	height:100%;
 	overflow:hidden;
 }
 .background img {
-	width:100%;
 	display:none;
 }
 .front .container{
