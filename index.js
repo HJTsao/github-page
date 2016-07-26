@@ -10,8 +10,32 @@ $(document).ready(function(){
 		 	   		$(this).animate({'top':'-6%','opacity':'0.8'},{duration:200,queue:false});
 				});
 		});
+	scrollSense();
+	seperate1Out();
 });
 
+var scrollSense = function(){
+	$(window).scroll(function(){
+		var nowTop = $(this).scrollTop();
+		$('#scrollCount').remove();
+		$('<p id="scrollCount">' + nowTop + '</p>').appendTo($('.WhoAreYou .row'));
+	});
+
+}
+
+var seperate1Out = function(){
+	$(window).scroll(function(){
+		var nowTop = $(this).scrollTop();
+		if(nowTop >= 400){
+			$('#seperate1').animate({'opacity':'1','width':'300px'},{duration:400,queue:false});
+			$('.WhoAreYou h1').animate({'opacity':'1'},{duration:400,queue:false});
+		}
+		else{
+			$('#seperate1').animate({'opacity':'0','width':'0px'},{duration:400,queue:false});
+			$('.WhoAreYou h1').animate({'opacity':'0'},{duration:400,queue:false});
+		}
+	});
+}
 
 
 		

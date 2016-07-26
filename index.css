@@ -15,7 +15,7 @@ body {
 	height:100vh;
 	top:0;
 	left:0;
-	overflow-y:visible;
+	overflow-y:hidden;
 	overflow-x:hidden;
 }
 .background img {
@@ -54,4 +54,35 @@ body {
 	height:128px;
 	width:auto;
 	padding: 2%;
+}
+
+#scroll-test {
+	width:30px;
+}
+
+.WhoAreYou{
+	margin-top:100px;
+	margin-bottom:100px;
+
+}
+.WhoAreYou h1{
+	position:relative;
+	text-align:center;
+	font-family:sans-serif;
+	color:grey;
+	opacity:0;
+}
+
+.WhoAreYou p{
+	text-align:center;
+	font-size:25px;
+	font-family:serif;
+}
+
+#seperate1{
+	margin-top:2em;
+	margin:auto;
+	width: 0px;
+	opacity:0;
+	border-bottom: 2px solid chocolate;
 }
