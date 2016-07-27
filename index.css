@@ -86,3 +86,12 @@ body {
 	opacity:0;
 	border-bottom: 2px solid chocolate;
 }
+
+.myPhoto {
+	opacity: 0;
+}
+
+#photoCut {
+	width: 100%;
+	overflow:hidden;
+}

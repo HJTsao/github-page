@@ -12,13 +12,14 @@ $(document).ready(function(){
 		});
 	scrollSense();
 	seperate1Out();
+	myPhoto();
 });
 
 var scrollSense = function(){
 	$(window).scroll(function(){
 		var nowTop = $(this).scrollTop();
 		$('#scrollCount').remove();
-		$('<p id="scrollCount">' + nowTop + '</p>').appendTo($('.WhoAreYou .row'));
+		$('<p id="scrollCount">' + nowTop + '</p>').appendTo($('.WhoAreYou .text-area .row'));
 	});
 
 }
@@ -34,6 +35,34 @@ var seperate1Out = function(){
 			$('#seperate1').animate({'opacity':'0','width':'0px'},{duration:400,queue:false});
 			$('.WhoAreYou h1').animate({'opacity':'0'},{duration:400,queue:false});
 		}
+	});
+}
+
+var myPhoto = function(){
+	var topPhotoOn = false;
+	var bottomPhotoOn
+	$(window).scroll(function(){
+		var nowTop = $(this).scrollTop();
+		if(nowTop >= 750 && !topPhotoOn){
+			$('#photo1').animate({'opacity':'1'},{duration:400,queue:false});
+			$('#photo2').animate({'opacity':'1'},{duration:400,queue:false});
+			topPhotoOn = true;
+		}
+		else if(nowTop < 750 && topPhotoOn){
+			$('#photo1').animate({'opacity':'0'},{duration:400,queue:false});
+			$('#photo2').animate({'opacity':'0'},{duration:400,queue:false});
+			topPhotoOn = false;
+		}
+		if(nowTop>=1050 && !bottomPhotoOn){
+			$('#photo3').animate({'opacity':'1'},{duration:400,queue:false});
+			bottomPhotoOn = true;
+		}
+		else if(nowTop < 1050 && bottomPhotoOn){
+			$('#photo3').animate({'opacity':'0'},{duration:400,queue:false});
+			bottomPhotoOn = false;
+		}
+
+
 	});
 }
 
