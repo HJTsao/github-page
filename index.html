@@ -6,6 +6,11 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	</head>
 	<body>
+		<div id='scrollTop'>
+			<p id='scrollCount'>0</p>
+		</div>
+
+
 		<div class='wrapper'>
 			<div class='front'>
 				<div class='background'>
@@ -36,7 +41,7 @@
 							<h1><b>Who are you?</b></h1>
 							<div id='seperate1'></div>
 							<p></br>I am AhGan Tsao, a college student from National Chiao Tung University, Taiwan.</br>I am now live in Tainan, study in Hsinchu.</br>My favorite are Gaming, Japanese Anime and Coding.</p>
-							<p id='scrollCount'>0</p>
+							
 						</div>
 					</div>
 
@@ -68,16 +73,48 @@
 
 			<div class='whatGame'>
 				<div class='container'>
-					<div class='row'>
-						<div class='col-md-5'>
-							<div class='gallery'>
+					<div class='text-area'>
+						<div class='container'>
+							<div class='row'>
+								<h1><b>Games I'm Playing</b></h1>
+								<div id='seperate2'></div>
+								<p></br>The gallery bellow shows the games I'm playing.</br>Please add me as friend so that we can play together!</p>
+							</div>
+						</div>
+					</div>
+					<div class='row' style='height:1000px'>
+						<p></br></br></p>
+						<div class='col-md-5 col-md-offset-1'>
+							<div class='select' style='height: 650px'>
+								<div class='buttonBG'></div>
+								<div class='button'>
+									<img src='img/dot.png' id='dot1' class='dot active-dot'/>
+									<img src='img/dot.png' id='dot2' class='dot' style='left:26px' />
+								</div>
 
+							</div>
+							<div class='gallery'>
+								<div class='gamepic game1 active-game'>
+									<div id='photoCut'><img src='img/overwatch.jpg' style='height: 650px'></div>
+								</div>
+								<div class='gamepic game2'>
+									<div id='photoCut'><img src='img/chronosgate.jpg' style='height: 650px;left:-100px;position:relative'></div>
+								</div>
 							</div>
 						</div>
 
-						<div class='col-md-7'>
-							<div class='text-area'>
-								
+						<div class='col-md-5'>
+							<div class='description'>
+								<div class='gamedescription game1 active-game'>
+									<h2><b>OVERWATCH</b></h2>
+									<p>One of my favoriate online FPS game.</br>I'm mainly playing Soilder76, Mercy and Roadhog.</br><span id='tag'>Battletag:heheXD #4629</span></p>
+								</div>
+
+								<div class='gamedescription game2'>
+									<h2><b>Chronos Gate</b></h2>
+									<p>My favorite mobile game.</br>Sadly, Chronos Gate is now available only in Taiwan, Hong Kong and Macau.</br>
+									Many people says this game is just like Tower of Savior, but I perfer Chronos Gate.</br><span id='tag'>UID: 1248245</span></p>
+								</div>
 							</div>
 						</div>
 					</div>

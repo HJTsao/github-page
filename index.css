@@ -4,6 +4,13 @@ body {
 .wrapper {
 	position:relative;
 }
+#scrollTop {
+	position:fixed;
+	left:5%;
+	top:90%;
+	z-index:3;
+}
+
 .front {
 	position:relative;
 	width:100%;
@@ -87,6 +94,28 @@ body {
 	border-bottom: 2px solid chocolate;
 }
 
+.whatGame h1{
+	position:relative;
+	text-align:center;
+	font-family:sans-serif;
+	color:grey;
+	opacity:0;
+}
+
+.whatGame p{
+	text-align:center;
+	font-size:25px;
+	font-family:serif;
+}
+
+#seperate2{
+	margin-top:2em;
+	margin:auto;
+	width: 0px;
+	opacity:0;
+	border-bottom: 2px solid chocolate;
+}
+
 .myPhoto {
 	opacity: 0;
 }
@@ -94,4 +123,69 @@ body {
 #photoCut {
 	width: 100%;
 	overflow:hidden;
+}
+
+.gamepic {
+	display:none;
+	position:relative;
+}
+
+.gamedescription {
+
+	top: -20px;
+	padding-left:50px;
+	height:650px;
+	display:none;
+	position:relative;
+	text-align:left;
+}
+
+
+.gamedescription h2{
+	position: relative;
+	top:20%;
+	text-align:left;
+}
+.gamedescription p{
+	position: relative;
+	top:20%;
+	text-align:left;
+}
+
+.active-game {
+	display:block;
+}
+
+.select {
+	position:absolute;
+	top:95%;
+	left:46%;
+	z-index: 1;
+}
+
+.dot {
+	position:absolute;
+	opacity:0.5;
+	height:24px;
+	cursor:pointer;
+}
+
+.active-dot {
+	opacity:1;
+	cursor:initial;
+}
+
+.buttonBG {
+	position:absolute;
+	top:-3px;
+	left:-25px;
+	background-color:grey;
+	border-radius: 30px;
+	opacity:0.8;
+	height:30px;
+	width:100px;
+}
+
+#tag {
+	color:chocolate;
 }
