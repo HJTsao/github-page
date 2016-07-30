@@ -121,13 +121,14 @@ body {
 }
 
 #photoCut {
+	position:relative;
 	width: 100%;
 	overflow:hidden;
 }
 
 .gamepic {
 	display:none;
-	position:relative;
+	position:absolute;
 }
 
 .gamedescription {
@@ -136,7 +137,7 @@ body {
 	padding-left:50px;
 	height:650px;
 	display:none;
-	position:relative;
+	position:absolute;
 	text-align:left;
 }
 

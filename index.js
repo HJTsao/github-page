@@ -59,27 +59,21 @@ var seperate2Out = function(){
 }
 
 var myPhoto = function(){
-	var topPhotoOn = false;
-	var bottomPhotoOn
+	var photoOn = false;
+	var nowTop = $(window).scrollTop();
 	$(window).scroll(function(){
-		var nowTop = $(this).scrollTop();
-		if(nowTop >= 750 && !topPhotoOn){
-			$('#photo1').animate({'opacity':'1'},{duration:400,queue:false});
-			$('#photo2').animate({'opacity':'1'},{duration:400,queue:false});
-			topPhotoOn = true;
+		nowTop = $(this).scrollTop();
+		if(nowTop >= 750 && !photoOn){
+			$('#photo1').fadeTo(400,1);
+			$('#photo2').delay(100).fadeTo(400,1);
+			$('#photo3').delay(200).fadeTo(400,1);
+			photoOn = true;
 		}
-		else if(nowTop < 750 && topPhotoOn){
-			$('#photo1').animate({'opacity':'0'},{duration:400,queue:false});
-			$('#photo2').animate({'opacity':'0'},{duration:400,queue:false});
-			topPhotoOn = false;
-		}
-		if(nowTop>=1050 && !bottomPhotoOn){
-			$('#photo3').animate({'opacity':'1'},{duration:400,queue:false});
-			bottomPhotoOn = true;
-		}
-		else if(nowTop < 1050 && bottomPhotoOn){
-			$('#photo3').animate({'opacity':'0'},{duration:400,queue:false});
-			bottomPhotoOn = false;
+		else if(nowTop < 750 && photoOn){
+			$('#photo3').fadeTo(400,0);
+			$('#photo2').delay(100).fadeTo(400,0);
+			$('#photo1').delay(200).fadeTo(400,0);
+			photoOn = false;
 		}
 
 
@@ -102,36 +96,19 @@ var linksIn = function(){
 }
 
 var buttonclick = function(){
-	/*$('#dot1').click(function(){
-		$('.game2').fadeOut(500).removeClass('active-game');
-		$('.game1').fadeIn(500).addClass('active-game');
+	$('#dot1').click(function(){
+		$('.game2').slideUp(400,function(){$('.game2').removeClass('active-game');});
+		$('.game1').delay(300).slideDown(400,function(){$('.game1').addClass('active-game');});
 		$('#dot2').removeClass('active-dot');
 		$(this).addClass('active-dot');
-	});*/
-
-	/*$('#dot1').click(function(){
-		$('.game2').fadeOut(500);
-		$('.game2').delay(500).removeClass('active-game').delay(500);
-		
-		$('.game1').delay(500).addClass('active-game').fadeIn(500);
-		$('#dot2').delay(230).removeClass('active-dot');
-		
-		$(this).delay(250).addClass('active-dot');
-	});*/
-	$('#dot1').click(function(){
-		$('.game2').fadeOut(500);
-		$('.game1').delay(500).fadeIn(500);
-		$('#dot2').delay(230).removeClass('active-dot');
-		
-		$(this).delay(250).addClass('active-dot');
 	});
 
 
 	$('#dot2').click(function(){
-		$('.game1').fadeOut(500);
-		$('.game2').delay(500).fadeIn(500);
-		$('#dot1').delay(230).removeClass('active-dot');
+		$('.game1').fadeOut(200,function(){$('.game1').removeClass('active-game');});
+		$('.game2').fadeIn(200,function(){$('.game2').addClass('active-game');});
+		$('#dot1').removeClass('active-dot');
 		
-		$(this).delay(250).addClass('active-dot');
+		$(this).addClass('active-dot');
 	});
 }
